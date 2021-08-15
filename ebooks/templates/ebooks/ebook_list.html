@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ebook Lists</h1>
+    {% for ebook in object_list %}
+        <hr>
+        <p><strong> Title : </strong> <a href="{% url 'ebook:detail' ebook.pk %}">{{ ebook.title}}</a></p>
+        <p><strong> Author : </strong> {{ ebook.author}}</p>
+    {% endfor %}
+    <hr>
+</body>
+</html>
